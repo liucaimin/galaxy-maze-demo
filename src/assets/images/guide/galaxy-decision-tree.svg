@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1400" viewBox="0 0 720 1400" role="img" aria-labelledby="title desc">
+  <title id="title">星系形态分类决策树</title>
+  <desc id="desc">从是否包含星系图像开始，依次判断主导成分、重叠、椭圆、Edge-on、核球、棒、旋臂以及各种附加结构。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#343a3d"/></marker>
+    <style>
+      .line{fill:none;stroke:#343a3d;stroke-width:2}.arrow{marker-end:url(#arrow)}
+      .node{stroke:#263238;stroke-width:2;rx:5}.t{font:18px 'Microsoft YaHei',sans-serif;fill:#263238;text-anchor:middle}.small{font:14px 'Microsoft YaHei',sans-serif;fill:#5d686c;text-anchor:middle}
+    </style>
+  </defs>
+  <rect width="720" height="1400" fill="#fff"/>
+
+  <rect class="node" x="310" y="24" width="105" height="54" rx="25" fill="#c91d20"/><text class="t" x="362.5" y="58" fill="#fff">开始</text>
+  <path class="line arrow" d="M362 78V112"/>
+  <rect class="node" x="303" y="112" width="120" height="58" fill="#ffe1ad"/><text class="t" x="363" y="137"><tspan x="363">是否包含星</tspan><tspan x="363" dy="22">系图像？</tspan></text>
+
+  <path class="line arrow" d="M303 141H205V190"/>
+  <text class="small" x="270" y="133">是</text>
+  <path class="line" d="M423 141H588V1340H430"/><text class="small" x="473" y="133">否</text>
+  <rect class="node" x="148" y="190" width="120" height="58" fill="#fff8c8"/><text class="t" x="208" y="215"><tspan x="208">是否有一个</tspan><tspan x="208" dy="22">主导成分？</tspan></text>
+
+  <path class="line arrow" d="M148 219H80V280"/><text class="small" x="114" y="210">是</text>
+  <path class="line arrow" d="M268 219H405V280"/><text class="small" x="328" y="210">否</text>
+  <rect class="node" x="22" y="280" width="120" height="58" fill="#d9f1df"/><text class="t" x="82" y="305"><tspan x="82">是否为椭圆</tspan><tspan x="82" dy="22">星系？</tspan></text>
+  <rect class="node" x="348" y="280" width="120" height="58" fill="#d9f1df"/><text class="t" x="408" y="305"><tspan x="408">各成分是否</tspan><tspan x="408" dy="22">有重叠？</tspan></text>
+
+  <path class="line" d="M22 309H10V750H360"/><text class="small" x="18" y="355">是</text>
+  <path class="line arrow" d="M142 309H232V370"/><text class="small" x="178" y="300">否</text>
+  <path class="line" d="M348 309H320V370H408V750"/><text class="small" x="334" y="300">是</text>
+  <path class="line" d="M468 309H500V750H408"/><text class="small" x="485" y="300">否</text>
+
+  <rect class="node" x="175" y="370" width="120" height="58" fill="#caf2f8"/><text class="t" x="235" y="395"><tspan x="235">是否为 Edge-</tspan><tspan x="235" dy="22">on 星系？</tspan></text>
+  <path class="line arrow" d="M175 399H115V468"/><text class="small" x="144" y="390">是</text>
+  <path class="line arrow" d="M295 399H355V468"/><text class="small" x="326" y="390">否</text>
+  <rect class="node" x="58" y="468" width="120" height="58" fill="#e7c9ef"/><text class="t" x="118" y="493"><tspan x="118">是否有核球</tspan><tspan x="118" dy="22">结构？</tspan></text>
+  <rect class="node" x="298" y="468" width="120" height="58" fill="#e7c9ef"/><text class="t" x="358" y="493"><tspan x="358">是否有棒状</tspan><tspan x="358" dy="22">结构？</tspan></text>
+
+  <path class="line" d="M58 497H38V750H360M178 497H198V750"/>
+  <path class="line arrow" d="M358 526V574"/>
+  <rect class="node" x="298" y="574" width="120" height="58" fill="#e7c9ef"/><text class="t" x="358" y="599"><tspan x="358">是否有旋臂</tspan><tspan x="358" dy="22">结构？</tspan></text>
+  <path class="line arrow" d="M358 632V680"/>
+  <rect class="node" x="298" y="680" width="120" height="58" fill="#e7c9ef"/><text class="t" x="358" y="705"><tspan x="358">是否有核球</tspan><tspan x="358" dy="22">结构？</tspan></text>
+  <path class="line" d="M298 497H268V550H358M418 497H448V550H358M298 603H268V656H358M418 603H448V656H358M298 709H268V750H360M418 709H448V750H360"/>
+
+  <path class="line arrow" d="M360 750V790"/>
+  <rect class="node" x="300" y="790" width="120" height="58" fill="#fee0de"/><text class="t" x="360" y="815"><tspan x="360">是否有环状</tspan><tspan x="360" dy="22">结构</tspan></text>
+  <path class="line arrow" d="M360 848V890"/><path class="line" d="M300 819H270V872H360M420 819H450V872H360"/>
+  <rect class="node" x="300" y="890" width="120" height="58" fill="#fee0de"/><text class="t" x="360" y="915"><tspan x="360">是否有尘埃</tspan><tspan x="360" dy="22">带</tspan></text>
+  <path class="line arrow" d="M360 948V990"/><path class="line" d="M300 919H270V972H360M420 919H450V972H360"/>
+  <rect class="node" x="300" y="990" width="120" height="58" fill="#fee0de"/><text class="t" x="360" y="1015"><tspan x="360">是否有引力</tspan><tspan x="360" dy="22">透镜多像</tspan></text>
+  <path class="line arrow" d="M360 1048V1090"/><path class="line" d="M300 1019H270V1072H360M420 1019H450V1072H360"/>
+  <rect class="node" x="300" y="1090" width="120" height="58" fill="#fee0de"/><text class="t" x="360" y="1115"><tspan x="360">是否有引力</tspan><tspan x="360" dy="22">透镜弧状像</tspan></text>
+  <path class="line arrow" d="M360 1148V1190"/><path class="line" d="M300 1119H270V1172H360M420 1119H450V1172H360"/>
+  <rect class="node" x="300" y="1190" width="120" height="58" fill="#fee0de"/><text class="t" x="360" y="1215"><tspan x="360">是否有其他</tspan><tspan x="360" dy="22">特殊结构</tspan></text>
+  <path class="line" d="M300 1219H270V1290H360M420 1219H450V1290H360"/>
+  <path class="line arrow" d="M360 1248V1320"/>
+  <rect class="node" x="307" y="1320" width="110" height="56" rx="26" fill="#c91d20"/><text class="t" x="362" y="1355" fill="#fff">结束</text>
+  <path class="line arrow" d="M588 1340H417"/>
+</svg>
